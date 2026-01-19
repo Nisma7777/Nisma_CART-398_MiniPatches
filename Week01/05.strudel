@@ -5,5 +5,5 @@
 
 // 5
 setcps(0.4)
-$: note("<[G F G Bb D F]*2 [Eb D Eb F
-        ]>").scale("C:minor").sound("gm_xylophone")
+$: note("<[G F G Bb D F]*2 [Eb D Eb F]>").scale("C:minor").sound("gm_xylophone")
+
