@@ -4,6 +4,7 @@
 
 // 02
 // inspired by the first strudel experiment by jotapeg.png
+await loadOrc('github:kunstmusik/csound-live-code/master/livecode.orc')
 stack(
   note("c a f e").csound('SynHarp'),
   sound("<[hh hh hh hh]/4>"),
