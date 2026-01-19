@@ -1,15 +1,10 @@
 // @title W01-03
-// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
-// @by vigliensoni
-// @date Jan 3, 2026
+// @by nisma
+// @date Jan 19, 2026
 
 // 03
-setcps(130/60/4)
-
-$: s("bd!4 [bd*4]!2 bd!2")
-  .slow(2)
-  .bank("dmx")
-
-$: s("[~ sd]!2")
-  .gain(0.75)
-  .bank("akailinn")
+setcps(0.5) 
+//using the piano also gives a nice tune 
+//try adding 70 instead of 67 but it's a high note, so it strikes out 
+$: note("36 43, 52 <55 ~ 67> 62 64, 43 43").sound("gm_acoustic_bass").dist(0.5).color("pink").punchcard()
+$: sound("bd:2@3*2 [rim@2*2]/4").color("yellow").punchcard()
