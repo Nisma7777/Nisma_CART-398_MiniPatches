@@ -1,0 +1,17 @@
+// @title W01-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Jan 23, 2026
+
+// 01
+samples({
+  violin: 'https://cdn.freesound.org/previews/55/55986_692375-lq.mp3',
+  whistle: 'https://cdn.freesound.org/previews/197/197974_3685064-lq.mp3',
+  acapello: 'https://cdn.freesound.org/previews/252/252642_4637523-hq.mp3'
+    }
+)
+//$: s("whistle@4 [<hh whistle hh>?0.2]").gain(2)
+//$: s("violin*4?0.4, [hh hh]/2*3 , [bd*3] ,<violin*2>").gain(1.5)
+setcps(0.5)
+$: s("violin*4?0.4 , <violin*2>").gain(0.9).punchcard()
+$: s("[hh hh]/2*4 , [bd*3]").gain(1.7).color("red").punchcard()
