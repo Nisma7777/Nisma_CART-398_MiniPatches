@@ -1,0 +1,21 @@
+// @title W02-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Jan 19, 2026
+
+// 03
+samples({
+  clap:'https://cdn.freesound.org/previews/561/561116_12517458-hq.mp3'
+    }
+)
+
+setcps(0.35) //slow is better for this tune, but changing it to 0.5 is also not bad 
+$: note("<[f3,a3,c4,e4] [eb3,g3,bb3,d4] [ab2,c3,eb3,g3] [db3,f3,ab3,c4]>*4")
+  .sound("piano")
+  .legato(1.4)
+  .gain(0.7)
+  .room(0.28)
+  .size(0.75)
+
+$: sound("[clap [clap clap] clap [clap clap]]/2")
+.gain(0.2)
