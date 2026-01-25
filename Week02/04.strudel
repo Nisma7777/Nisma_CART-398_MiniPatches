@@ -1,0 +1,21 @@
+// @title W02-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Jan 25, 2026
+
+// 04
+samples({hit:'https://cdn.freesound.org/previews/842/842508_18255452-hq.mp3',
+        pop: 'https://cdn.freesound.org/previews/708/708605_13515726-hq.mp3'})
+setcps(0.9) // relaxed but upbeat
+$: note("<[c4 e4 g4] ~ [f4 a4 c5] ~>")
+  .sound("piano")
+  .legato(0.9) //playing with the legato value does give different beats , try lowering it to makes this part faster
+  .gain(0.6)
+  .room(0.2)
+
+$: n(" [2 -1 5 <7 2>   3 6 <<9,-1> <2,6>> <1 0>],<<2,4>*2 <5,[2  5 ]/2>>") //adding randomness makes it very fun , but originally there was no randomness , that version is a bit fast
+  .scale("d:minor@3")
+  .sound("gm_electric_guitar_clean@4,gm_electric_guitar_muted@2")
+  .room(1).lpf(2000,5000).gain(0.4).slow(2)._punchcard()
+
+$: sound("<[pop pop*2]> ").gain(0.7).slow(2)
