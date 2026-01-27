@@ -1,0 +1,9 @@
+// @title W03-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Jan 15, 2026
+
+//01
+samples({ acapello: 'https://cdn.freesound.org/previews/252/252642_4637523-hq.mp3'})
+$: sound("acapello").begin("<0 0.5@2 0>").speed("-2").end(1) //we will be playing this and then end it and transition to the chorus
+_$: sound("acapello").begin("< 0.99 1 1@2 0 0.5 0.99>").end(0)
