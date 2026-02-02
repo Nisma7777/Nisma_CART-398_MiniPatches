@@ -1,0 +1,16 @@
+// @title W03-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 2, 2026
+
+
+
+// 03
+//My experimentation with piano and samples
+samples({rain: 'https://cdn.freesound.org/previews/232/232199_288547-lq.mp3',
+        forest: 'https://cdn.freesound.org/previews/34/34073_28216-hq.mp3',
+      cb: 'https://cdn.freesound.org/previews/773/773466_16665092-lq.mp3',
+        flute: 'https://cdn.freesound.org/previews/355/355004_6552981-hq.mp3'})
+$: note("5 ,7, 2 [6 ,7 ,2] [4 ,7 ,2] [3 ,7 ,2 ]").scale("C:minor").sound("gm_acoustic_guitar_steel").slow(1.7)
+$: sound("forest").begin(0.5).end(1).slow(1.5).gain(0.25)
+// $: sound("flute").gain(0.3)
