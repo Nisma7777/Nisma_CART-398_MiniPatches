@@ -1,0 +1,10 @@
+// @title W03-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 2, 2026
+
+// 04
+//Very dark vibe did not really play with the high-pitched samples, wanted to try making something dark using simple elements and functions 
+$: note("[C , E , C]*2 [B , G#]*2 [A ,E , C] [E ,A ,D] [E ,A]*2").slow(1.5).s("gm_voice_oohs").gain(0.9)
+$: note("<1 4 5 7>").scale("C:minor").s("gm_violin").gain(0.3)
+$: sound("handbells/2")
