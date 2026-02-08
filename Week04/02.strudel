@@ -1,0 +1,15 @@
+// @title W04-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 4, 2026
+
+
+//02
+setcpm(120)
+
+$: n("0 2 3 2 0 2 3 4")
+  .scale("d4:minor:pentatonic")
+  .scaleTranspose("< 1 -2 -1 2>")
+  .struct("[1 1 0 1 1 ]*2")
+  .s("gm_koto")
+  .slow(4)
