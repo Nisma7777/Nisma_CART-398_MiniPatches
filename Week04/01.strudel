@@ -1,0 +1,10 @@
+// @title W04-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 7, 2026
+
+//01
+//worked with scales and alternating between different scales 
+//nice to dig deeper into how we can use transpose to increase / decrease the steps in the same scale, make it either higher or lower
+$: n(" 0 1 2 3 4 5 6").scale("c2:<harmonic:minor bebop>").scaleTranspose("<0 1 2>").sound("gm_electric_guitar_jazz").slow(0.7).gain(0.9)
+$: n("[ 1 2 3]").struct("1 1 1 0 1 1 1 0 1 1 1  ").scale("c2:<minor:blues   major:blues> ").scaleTranspose(6).s("gm_fx_sci_fi")
