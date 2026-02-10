@@ -1,0 +1,16 @@
+// @title W04-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 9, 2026
+
+
+// 03
+samples({ cb: 'https://cdn.freesound.org/previews/773/773466_16665092-hq.mp3'})
+
+$: n("[0,2,4] [3,5,0] [4,6,1] [0,2,4]*2")
+  .scale("c4:minor")
+  .s("gm_pizzicato_strings") //instead of gm_piano balafon_hard is also nice for casio type beat 
+  .slow(1)
+
+$: sound("sd*2")
+$: sound("~ ~ cb@3").begin(0.9).end(1).gain(0.7)
