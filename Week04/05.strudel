@@ -1,0 +1,16 @@
+// @title W04-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 10, 2026
+
+
+
+
+//05
+//Experimenting with different functions
+//note("[0,4,7] [0,3,7]".add("<48 52 56>")).sound("gm_slap_bass_2").every(1 , x=> x.rev()).every(2 , x=> x.fast(2))
+
+n("[0 2 4 3]")
+  .scale("c4:minor")
+  .off(0.6, every(2)).every(2, x=> x.rev()).every(2 , x=> x.fast(2))
+  .s("<gm_clarinet gm_choir_aahs>")
