@@ -1,0 +1,37 @@
+// @title W04-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 10, 2026
+
+
+
+// 04
+setcpm(90)  // play with this setting, it to 50 and 100 gives a different feel
+
+$: chord("<Am C D F>")
+  .struct("<x x x x x>") 
+  .voicing()
+  .room(0.6)
+  .gain(0.3)
+  .slow(2.5)
+
+$: n("0 0 3 4 3 2 0 0")
+  .scale("a4:minor")
+  .mask("[~ x ~ x ~ ]? 0.5")     
+  .s("gm_flute")
+  .gain(0.35)
+  .room(0.6)
+  .slow(2)
+
+
+$: n("0 0 0 5 0 0 3 0")
+  .scale("a2:minor")
+  .struct("x ~ x ~ x ~ x ~")
+  .s("gm_acoustic_bass")
+  .gain(2)
+  .slow(2)
+
+//drums
+$: s("bd*4")
+$: s("[~ sd ~ sd]/2")
+$: s("[cp*4]/4").gain(.5)
