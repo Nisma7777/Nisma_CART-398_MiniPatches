@@ -1,0 +1,27 @@
+// @title W05-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 16, 2026
+
+//01
+setcpm(140)
+
+$: n("0 ~ 0 ~[3, 3 ,3]~ 0 ~")
+   .scale("a2:minor")
+   .s("gm_synth_bass_1")
+   .gain(0.3)
+$: n("0 2 3 2 0 2 5 3")
+   .scale("a4:minor")
+   .struct("x ~ x x ~ x x ~ ").every(2 |3, x=> x.rev())
+   .s("gm_lead_2_sawtooth")
+   .gain(0.2)
+$: chord("<Am G F G>").voicing().struct("~ x ~ x").every(2 , x=> x.rev()).gain(0.9)
+samples('github:tidalcycles/dirt-samples')
+
+// Kick
+$: s("bd*4")
+   .gain(1)
+
+// Snare
+$: s("~ sd ~ sd")
+   .gain(0.9)
