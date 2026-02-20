@@ -1,0 +1,12 @@
+// @title W06-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 7, 2026
+
+//01
+setcpm(40)
+$: note("<[c2 c3]*4 [bb1 bb2]*4 [f2 f3]*4 [eb2 eb3]*4>")
+.sound("gm_piano").lpf(700) .punchcard()
+
+$: sound ("[bd bd bd bd ]*2").gain(1)
+$: sound("[clap clap]*2").every(2 , x => x.fast(2)).gain(0.3)
