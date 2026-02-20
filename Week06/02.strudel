@@ -1,0 +1,24 @@
+// @title W06-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 20, 2026
+
+
+//02
+$: note("0@2 2 3 7 3 2 0 -2@2").every(2 , x=> x.rev()).slow(2)
+  .scale("C:minor A:minor D:minor ? 0.7") //randomness makes it much better 
+  .s("gm_acoustic_guitar_steel") // gm_electric_guitar_jazz , gm_voice_oohs the best one yet -->gm_acoustic_guitar_steel
+  .legato(1.2)
+  .room(0.4)
+  .gain(0.7).cpm(60)
+
+$: note("0 ~ 0 ~ [-2 -2] ~ 0 ~")
+  .scale("C:minor")
+  .s("sine")
+  .octave(3)
+  .gain(0.2)
+  .slow(2)
+
+$: sound("bd ~ bd ~ sd ~ bd bd")
+  .slow(1)
+  .gain(0.4)
