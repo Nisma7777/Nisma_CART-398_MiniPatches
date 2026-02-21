@@ -1,0 +1,32 @@
+// @title W06-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 21, 2026
+
+//03
+$: note("0@2 2 4@2 3 2 0@3 " ).every(2 , x=>x.fast(2))
+  .scale("C:major")
+  .s("gm_acoustic_guitar_nylon")
+  .legato(1.4)
+  .room(0.5)
+  .gain(0.8)
+  .slow(2)
+$: sound("bd ~ ~")
+  .gain(0.9)
+
+$: sound("~ ~ hh")
+  .gain(0.15)
+
+$: note("[0 ~ 4 ~ 3 ~]").every(2 , x=> x.rev())
+  .scale("C:major")
+  .s("gm_acoustic_bass")
+  .octave(3)
+  .gain(0.6)
+  .slow(2)
+
+$: note("<0 4 5>")
+  .scale("C:major")
+  .s("gm_pad_new_age")
+  .slow(4)
+  .room(0.8)
+  .gain(0.3)
