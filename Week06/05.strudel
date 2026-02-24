@@ -1,0 +1,48 @@
+// @title W06-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @by nisma
+// @date Feb 24, 2026
+
+
+//05
+setcpm(90)
+
+let piano = note("0 2 4 5 4 2 0 -2")
+  .scale("D:minor")
+  .every(8, x => x.rev())
+  .every(6, x => x.fast(2))
+  .s("gm_electric_piano_1")
+  .legato(1.35)
+  .room(0.55)
+  .gain(0.75)
+  .slow(2)
+
+
+let pad = note("<0 4 5 3> <0 4 5 2> <0 3 5 1> <0 4 5 3>")
+  .scale("A:major")
+  .s("gm_violin")
+  .slow(4)
+  .room(0.9)
+  .gain(0.28)
+
+let guitar = note("0 ~ 4 ~ 5 ~ 3 ~")
+  .scale("F:major")
+  .s("gm_acoustic_guitar_nylon")
+  .gain(0.4)
+  .room(0.4)
+  .slow(2)
+
+
+let drums = stack(
+  sound("bd ~ ~ bd").gain(0.35),
+  sound("~ ~ sd ~").gain(0.18)  // less snare
+)
+  .lpf(1200)     
+  .room(0.25)    
+
+let air = sound("noise")
+  .gain(0.02)
+  .room(0.7)
+
+
+stack(piano, pad, guitar, drums, air)
