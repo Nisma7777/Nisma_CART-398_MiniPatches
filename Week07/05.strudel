@@ -1,0 +1,10 @@
+//PATCH- 05
+//Experimenting with one of my old patches 
+//very dramatic 
+$: note("0 2 4 7 5 4 2 0 2 4 5 7 9 7 5 4").every(2 , x => x.fast(2))
+  .scale("<D:major A:Minor>")
+  .s("<gm_steel_drums gm_orchestra_hit>")
+  .legato(1.3)
+  .room(0.5)
+  .gain(0.7)
+  .slow(2).color("#70E000").punchcard()
