@@ -1,0 +1,8 @@
+//PATCH-02
+
+shape(300 , 0.2 ,2).color(1 , 0.6 , 0.2).invert(() => Math.sin(2*time)*2).out(o0)
+
+
+shape(300 , 0.2 ,2).color(1 , 0.5 , 0.5).invert(() => Math.sin(2*time)*2).out(o1)
+
+//render
