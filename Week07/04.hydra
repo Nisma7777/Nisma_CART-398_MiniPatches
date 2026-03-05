@@ -1,0 +1,27 @@
+// PATCH-4
+
+
+await loadScript("https://cdn.jsdelivr.net/gh/geikha/hyper-hydra@main/dist/hydra-text.js");
+
+hydraText.font = "serif";
+hydraText.lineWidth = "4%";
+str = " hydra_! ";
+
+// --- background visual (in o1) ---
+osc(6.795, 0.145, 1.216)
+  .color(0.169, 0.976, -0.077)
+  .rotate(0.19, 0.171)
+  .pixelate(2.773, 10.603)
+  .modulate(noise(3.263), () => 1.031 * Math.sin(0.155 * time))
+  .out(o1);
+
+// --- text layer on top of it ---
+solid(1, 0.2)
+  .blend(src(o1))              // use background from o1
+  .layer(text(str))            // filled text
+  .diff(strokeText(str)        // stroked text diff
+
+        .modulateScale(noise(1,1), 0.4))
+  .out(o0);                    // final output to o0
+
+//BUT SOME PROBLEM XD
