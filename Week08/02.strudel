@@ -1,0 +1,38 @@
+//PATCH - 02 
+//Used arrange to give more structure to patch -1 
+//Modified version of patch one 
+
+let bass =
+  note("c2 e3 e2 e")
+    .sound("gm_acoustic_bass")
+    .every(2, x => x.rev())
+    .lpf(400)
+    .gain(0.5)
+
+let guitar =
+  note("[[48 52] [52 48]] [52 52 48 48]")
+    .sound("<gm_electric_guitar_jazz gm_synth_bass_2>")
+    .every(2, x => x.slow("<2 3 1>"))
+    .gain(0.7)
+
+let choir =
+  note("<55 56 57 58@1.5>")
+    .sound("gm_choir_aahs")
+    .gain(0.7)
+
+let choir2 =
+  note("55 57 56 59 57 56 55 52")
+    .sound("gm_acoustic_guitar_steel")
+    .slow(2)
+    .room(0.4)
+    .gain(0.6)
+
+$: arrange(
+  [4, choir],
+  [4, stack(bass,guitar)],
+  [4 , stack(choir2 , bass)],
+  [4, stack(bass,guitar)]
+)
+
+//background
+$:sound("dantranh")
