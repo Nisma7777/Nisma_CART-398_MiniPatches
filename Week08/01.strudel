@@ -1,0 +1,9 @@
+//PATCH - 01
+
+$: note("c2 e3 e2 e").sound("gm_acoustic_bass").lpf(400).every(2 , x=>x.rev()).gain(0.5)
+$: note("[[48 52]  [52 48] ] [52 52  48 48]" ).sound("<gm_electric_guitar_jazz gm_synth_bass_2>").every(2 , x=>x.slow("<2 3 1>"))
+
+
+//starting part
+//Mute
+_$: note("<55 56 57 58*3 59 60>").sound("gm_choir_aahs")
