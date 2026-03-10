@@ -1,0 +1,31 @@
+//PATCH - 04
+
+setcpm(76)
+
+let lead =
+  note("[0 2 3@2 2 0 3 5 3]*2 ")
+    .scale("G:minor")
+    .s("gm_pizzicato_strings  gm_electric_guitar_muted")
+    .every(4, x => x.rev())
+    .legato(1)
+    .room(0.25)
+    .gain(0.75)
+
+let counter =
+  note("7 ~ 5 ~ 3 ~ 2 ~")
+    .scale("G:minor")
+    .s("gm_acoustic_guitar_steel")
+    .gain(0.3)
+    .room(0.3)
+
+let bass =
+  note("0 ~ 0 ~ 3 ~ 5 ~")
+    .scale("G:minor")
+    .s("gm_synth_bass_2")
+    .lpf(450)
+    .gain(0.45)
+
+let clap = sound("clap").lpf(1000)
+
+$: stack(lead, counter, bass , clap ).gain(0.3)
+
