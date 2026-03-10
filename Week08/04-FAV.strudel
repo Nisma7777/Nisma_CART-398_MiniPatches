@@ -1,0 +1,47 @@
+//PATCH -04
+
+setcpm(102)
+
+let chords =
+  note("<[0 4 7] [5 9 12] [7 11 14] [4 7 11]>")
+    .scale("C:major")
+    .s("gm_piano")
+    .slow(2)
+    .room(0.35)
+    .gain(0.15)
+
+let lead = note(" [0 2 4 7 5 4 2 0] | [0 0 2 2 7 7 5 5] | [5 5 7 7 2 2 0 0] | [0 0 2 2 7 7 5 5] ")
+  .scale("C:major")
+  .s("gm_marimba")
+  .slow(2)
+  .legato(1.1)
+  .room(0.25)
+  .gain(0.65)
+
+
+let bass =
+  note("0 ~ 0 5 7 ~ 7 4")
+    .scale("C:major")
+    .s("gm_fingered_bass")
+    .lpf(500)
+    .gain(0.45)
+
+let drums = stack(
+  s("bd ~ ~ bd").gain(0.22),
+  s("~ cp ~ ~").gain(0.16),
+  s("~ hh ~ hh").gain(0.12)
+
+  
+)
+
+
+let sparkle =
+  note("7 9 7 5 4 5 7 9")
+    .scale("C:major")
+    .s("gm_xylophone")
+    .slow(2)
+    .gain(0.22)
+    .room(0.2)
+
+
+$: stack(chords, lead, bass, drums)
