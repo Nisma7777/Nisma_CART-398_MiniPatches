@@ -1,0 +1,35 @@
+//PATCH - 03
+
+setcpm(78)
+let melody =
+  note("0 2 3 5 7 5 3 2 0")
+  .scale("A:minor")
+  .s("gm_acoustic_grand_piano")
+  .legato(1.4)
+  .room(0.6)
+  .gain(0.8)
+  .slow(2)
+
+let choir =
+  note("<[ 0*2 0 0 0] [5*2 5 5 5] [3*2 3 3 3] [2 2 2 2*2]>")
+  .scale("D:minor")
+  .sound("gm_lead_3_calliope")
+  .slow(4)
+  .room(0.8)
+  .gain(0.4)
+
+let guitar =
+  note("0 ~ 5 ~ 3 ~ 2 ~")
+  .scale("A:minor")
+  .sound("gm_acoustic_guitar_nylon")
+  .slow(2)
+  .room(0.4)
+  .gain(0.45)
+
+let drums = stack(
+  sound("bd ~ ~ bd").gain(0.35),
+  sound("~ ~ sd ~").gain(0.2)
+).lpf(1200)
+
+$: stack(melody, choir, guitar, drums)
+
