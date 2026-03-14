@@ -1,0 +1,3 @@
+//PATCH - 01
+osc((35)
+    ).thresh().modulate(osc().rotate(10 , -10)).mask(shape(999, (0.6) ).scale(1.5 , ()=>Math.sin(time))).color([1,0].smooth() ,0.3 , [0.7 , 0.6].smooth()).repeat(5,5).out()
