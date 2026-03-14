@@ -1,0 +1,12 @@
+//PATCH - 04
+
+$: note("<[0 2 4 7] [5 4 2 0] [0 4 7 9] [7 5 4 2] [0 2 4 5] [7 9 7 5]  [0 4 5 7] [5 4 2 0]>").jux(rev)
+.scale("C:major")
+.s("sine | Triangle")
+.slow(1)
+.legato(1.1)
+.room(0.25)
+.gain(0.7)
+
+//$: note("<c2, eb3 g3 [bb3 c4]>").s("piano").scale("A:minor").slow(2).color('cyan')
+$: note("[c2 eb3] [g3 , g3]*2 [c4 c4 bb3 bb3]").s("gm_music_box").scale("A:minor").slow("3").color('cyan').every(2 , x=>x.rev()).add("c2 | bb3 d  | e e e").gain(0.6)
