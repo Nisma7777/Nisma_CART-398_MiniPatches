@@ -1,0 +1,14 @@
+//PATCH-02
+
+osc(16.647, 0.1, 1.574)
+	.kaleid(57.281)
+	.out();
+// pattern-driven sides
+noise(0.35)
+	.kaleid(143.313)
+	.out();
+// classic combo: modulate + kaleid
+noise(8.662)
+	.modulate(osc(1.204), 0.269)
+	.kaleid(10.011)
+	.out();
