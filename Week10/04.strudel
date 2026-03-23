@@ -1,0 +1,17 @@
+//PATCH - 04
+
+$: stack(
+  n("0 ~ 0 ~ 0 ~ 0 ~").sound("bd:4"),         
+  n("~ 1 ~ 1 ~ 1 ~ 1").sound("sd:2"),         
+  n("0 0 0 0 0 0 0 0").sound("hh27*2").gain(0.7) )
+
+
+$: stack(
+n("0 ~ 0 ~ 3 ~ 5 ~").sound("sawtooth").cutoff(1200).gain(0.6)
+)
+
+// // melodic voice – gentle, vocal‑like
+$: stack(
+  note("c5 e5 g5 a5 g5 e5").sound("gm_banjo")
+    .room(0.4).size(0.7).gain(0.8)
+)
