@@ -1,0 +1,5 @@
+// PATCH - 05
+
+b = shape(500,500).color(1, 0.6, 0.784)
+f = shape(6).scale(2.5,()=>Math.sin(time)).rotate(-0.7 , 0.7).repeat(8 ,8).color(0.298, 0.788, 0.941).scrollY(0,-0.1).modulateScale(gradient().g(),2)
+b.blend(f).out()
