@@ -1,0 +1,4 @@
+
+s0.initVideo( "https://videos.pexels.com/video-files/36489178/15472513_960_540_24fps.mp4")
+src(s0).out()
+src(s0).kaleid(4).scale(()=>Math.sin(time)).rotate(0.2 ,1).blend(osc(10, 0.1, 1), 0.3).out()
