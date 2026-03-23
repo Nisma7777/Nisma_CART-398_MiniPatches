@@ -1,0 +1,7 @@
+//PATCH - 02 
+//Experimented with external source
+
+s0.initImage("https://picsum.photos/1920/1080");
+src(s0).out();
+
+src(s0).kaleid(7).scale(()=>Math.sin(time)).rotate(0.2 ,1).blend(osc(10, 0.1, 1), 0.3).out()
